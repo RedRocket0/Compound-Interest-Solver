@@ -56,20 +56,24 @@ def TSolver():
 
     print("Time: " + str(t) + " years")
 
-print("What is/are the missing values?")
-answer = input("future value('f' only), principal('p only), rate('r' only), time('t' only): ")
+while True:
+    print("What is/are the missing values?(Type 'exit' to end the program)")
+    answer = input("future value('f' only), principal('p only), rate('r' only), time('t' only): ")
 
-if (answer == 'f'):
-    FandCSolver()
+    if (answer == 'f'):
+        FandCSolver()
 
-elif (answer == 'p'):
-    PSolver()
+    elif (answer == 'p'):
+        PSolver()
 
-elif (answer == 'r'):
-    RSolver()
+    elif (answer == 'r'):
+        RSolver()
 
-elif (answer == 't'):
-    TSolver()
+    elif (answer == 't'):
+        TSolver()
+        
+    elif (answer == 'exit'):
+        break
 
-else:
-    print("Invalid input!")
+    else:
+        print("Invalid input!")
